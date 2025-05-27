@@ -8,5 +8,9 @@ export const routes: Routes = [
   {
     path: 'auth',
     loadChildren: () => import('./post-auth/post-auth.module').then(m => m.PostAuthModule),
-  }
+  },
+  {
+    path: '**',
+    redirectTo: '',
+  },
 ];
